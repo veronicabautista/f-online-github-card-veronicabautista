@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  background: linear-gradient(lightgrey, grey);
+  height: 100vh;
+}
+.App-header {
+  
+}
+.selectUsers {
+  margin: 50px;
+  width: 300px;
+}
+
+
