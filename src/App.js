@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './components/Card';
 import './App.css';
 
 const usersData = [];
@@ -58,6 +59,10 @@ class App extends Component {
                 })}
             </select>
         </header>
+        <Card
+          adalabUsers={this.state.adalabUsers}
+          userSelected={this.state.userNames}
+        />
       </div>
     );
   }
