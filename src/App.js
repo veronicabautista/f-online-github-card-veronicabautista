@@ -1,57 +1,62 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const apiList = "https://api.github.com/orgs/adalab/members";
+const usersData = [];
+const apiList = "https://api.github.com/orgs/adalab/members?per_page=125";
 
 class App extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-      users: [],
-      name: "",
+      adalabUsers: [],
+      userName: "",
     }
 
-    this.selectUser = this.selectUser.bind(this);
+    this.selectHandler = this.selectHandler.bind(this);
   }
 
-  componentDidMount () {
-    this.fetchGithubUsers()
+ componentDidMount() {
+    this.fetchGithubUsers();
   }
+
 
   fetchGithubUsers (){
     fetch(apiList)
     .then((response) => response.json())
-    .then((data) => {
-      let userID = [];
-      for (let i=0; i <data.lenght; i ++) {
-        userID[i]= {
-          ...data[i],
-          id: i
-        }
+    .then(users => {
+      for (let i = 0; i < users.length; i++) {
+        this.getUser(users[i].url)
       }
-      (console.log("usuarios: " + userID))
-      this.setState ({
-        users: userID
-      })
     })
   }
 
-  selectUser(event) {
-    const mySearch = event.currentTarget.value;
-
-    this.setState({
-      name: mySearch
-    });
+  getUser(url) {
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        usersData.push(data)
+        this.setState({ adalabUsers: [...usersData] })
+      })
   }
+
+  selectHandler(e) {
+    this.setState({ userName: e.target.value })
+  }
+
   
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <select className="selectUsers">
-            <option className="option-user">Selecciona una usuaria</option>
-          </select>
+        <select className="selectUsers" onChange={this.selectHandler}>
+                <option className="option" value=''>Selecciona una usuaria</option>
+                {this.state.adalabUsers.map(user => {
+                    return (
+                        <option key={user.id} className="option" value={user.login}>{user.login}</option>
+                    );
+                })}
+            </select>
         </header>
       </div>
     );
