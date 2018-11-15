@@ -11,45 +11,36 @@ class Card extends Component {
 
       (console.log(profile))
 
-      // INFO
-      // avatar_url
-      // login
-      // name
-      // location
-      // repos
-      // followers
-      // following
-      // created_at
-
       return (
         <div className="card-container">
+        <div className="card">
           <div>
             <img src={profile.avatar_url}
               className="card-image"
               alt={`Foto de la usuaria ${profile.login}`} />
 
           </div>
-          <div>
+          <div className="card-personal">
             <p className="card-username">@{profile.login}</p>
             <p className="card-name">{profile.name}</p>
-
+            <p>{profile.lotacion}</p>
           </div>
-          <div>
-            <p>Localización</p>
-          </div>
-          <div>
+          <div className="card-github">
             <div>
-              <p>10 repos</p>
+              <p>{profile.repos}</p>
             </div>
             <div>
-              <p>10 followers</p>
+              <p>{profile.followers}</p>
             </div>
             <div>
-              <p>10 following</p>
+              <p>{profile.following}</p>
             </div>
           </div>
-          <p>Miembro desde hace</p>
         </div>
+        <div>
+          <p>{profile.created_at}</p>
+        </div>
+      </div>
       );
     } else {
       return null;

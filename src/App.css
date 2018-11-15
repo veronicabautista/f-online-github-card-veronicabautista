@@ -17,10 +17,21 @@
 .option {
   height: 500px;
 }
-.card-container {
-  height: 550px;
-  width: 350px;
+.card {
+  height: 536px;
+  width: 320px;
   background: white;
   border-radius: 10px;
 }
+.card-image {
+  max-width: 320px;
+}
+.card-personal{
+  height: 115px
+}
+.card-github {
+  height: 100px;
+  background: linear-gradient(#3d8171, #4eb8a3);
+}
+
 
