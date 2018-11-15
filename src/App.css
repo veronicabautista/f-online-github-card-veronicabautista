@@ -17,7 +17,7 @@
 .option {
   height: 500px;
 }
-.card {
+.card-container {
   height: 550px;
   width: 350px;
   background: white;

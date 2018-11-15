@@ -37,6 +37,7 @@ class App extends Component {
       .then(res => res.json())
       .then(data => {
         usersData.push(data)
+        usersData.sort((a, b) => (a.login > b.login) ? 1 : (b.login > a.login) ? -1 : 0);
         this.setState({ adalabUsers: [...usersData] })
       })
   }
@@ -61,7 +62,7 @@ class App extends Component {
         </header>
         <Card
           adalabUsers={this.state.adalabUsers}
-          userSelected={this.state.userNames}
+          userName={this.state.userName}
         />
       </div>
     );
