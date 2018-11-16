@@ -1,15 +1,20 @@
-*{
-  margin: 0;
-  padding: 0;
+
+body, html { 
+  margin: 0; 
+  padding: 0; 
+  height: 100%;
 }
 .App {
   text-align: center;
-  background: url("./images/github-logo.png"), linear-gradient(lightgrey, grey);
+  background: url("./images/github-logo.png"), linear-gradient(#e4e0e0, #b8b8b9);
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
   font-family: 'Ubuntu', sans-serif;
+  padding: 30px;
+  position: relative;
+  height: 100vh;
 }
 .App-header {
   display: flex;
@@ -17,17 +22,20 @@
   position: relative;
 }
 .selectUsers {
-  margin: 50px 0 10px 0;
+  margin-bottom: 20px;
   width: 300px;
   height: 40px;
   border-radius: 5px;
   font-weight: bold;
   color: grey;
+  -webkit-box-shadow: 0 0 1em;
+  padding: 10px;
+}
+.select{
+  cursor: 10px;
 }
 .option {
-  margin: 20px;
- 
-  /* height: 500px; */
+  padding: 20px;
 }
 .card-container{
   display: flex;
@@ -36,43 +44,63 @@
   align-items: center;
 }
 .card{
-  height: 536px;
   width: 320px;
-  background: white;
-  border-radius: 10px;
+  background: white;  
+  -webkit-box-shadow: 0 0 1em;
+  border-radius: 5px;
 }
 .card-image {
   width: 320px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .card-personal {
   height: 115px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 20px 0 0 30px;
+  margin: 20px 0 0 30px;
 }
 .card-username {
- color: lightgrey;
+ color: darkgrey;
 }
 .card-name{
-  color: #3d8171;
+  color: #099d8d;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-top: 0;
 }
+
 .fa-map-marker-alt{
-  color: #4eb8a3;
+  color: #14d8c3;
   margin-right: 5px;
+}
+.card-location{
+  color: grey;
 }
 .card-github {
   height: 100px;
-  background: linear-gradient(#3d8171, #4eb8a3);
+  background: linear-gradient(#099d8d, #14d8c3);
   color: white;
-  font-weight: bold;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.github-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-github-number{
   font-size: 40px;
+  font-weight: bold;
+}
+.card-github-text{
+  font-size: 12px;
+  font-weight: lighter;
 }
 .date-created{
   color: grey;
@@ -81,5 +109,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+.logo-adalab{
+  width: 100px;
 }
 

@@ -23,17 +23,22 @@ class Card extends Component {
           <div className="card-personal">
             <span className="card-username">@{profile.login}</span>
             <h2 className="card-name">{profile.name}</h2>
-            <span><i class="fas fa-map-marker-alt"></i>{profile.location}</span>
+            <span className="card-location">
+              <i className="fas fa-map-marker-alt"></i>{profile.location}
+            </span>
           </div>
           <div className="card-github">
-            <div>
-              <span>{profile.public_repos}</span>
+            <div className="github-data">
+              <span className="card-github-number">{profile.public_repos}</span>
+              <span className="card-github-text">Repos</span> 
             </div>
-            <div>
-              <span>{profile.followers}</span>
+            <div className="github-data">
+              <span className="card-github-number">{profile.followers}</span>
+              <span className="card-github-text">Follower</span>
             </div>
-            <div>
-              <span>{profile.following}</span>
+            <div className="github-data">
+              <span className="card-github-number">{profile.following}</span>
+              <span className="card-github-text">Following</span>
             </div>
           </div>
         </div>

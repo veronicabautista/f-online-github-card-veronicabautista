@@ -18,7 +18,7 @@ class App extends Component {
     this.selectHandler = this.selectHandler.bind(this);
   }
 
- componentDidMount() {
+  componentDidMount() {
     this.fetchGithubUsers();
   }
 
