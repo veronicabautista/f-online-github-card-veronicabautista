@@ -21,24 +21,24 @@ class Card extends Component {
 
           </div>
           <div className="card-personal">
-            <p className="card-username">@{profile.login}</p>
-            <p className="card-name">{profile.name}</p>
-            <p>{profile.lotacion}</p>
+            <span className="card-username">@{profile.login}</span>
+            <h2 className="card-name">{profile.name}</h2>
+            <span><i class="fas fa-map-marker-alt"></i>{profile.location}</span>
           </div>
           <div className="card-github">
             <div>
-              <p>{profile.repos}</p>
+              <span>{profile.public_repos}</span>
             </div>
             <div>
-              <p>{profile.followers}</p>
+              <span>{profile.followers}</span>
             </div>
             <div>
-              <p>{profile.following}</p>
+              <span>{profile.following}</span>
             </div>
           </div>
         </div>
-        <div>
-          <p>{profile.created_at}</p>
+        <div className="date-created">
+          <span>{profile.created_at}</span>
         </div>
       </div>
       );

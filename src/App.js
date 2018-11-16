@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './components/Card';
+import Footer from './components/Footer';
 import './App.css';
 
 const usersData = [];
@@ -51,19 +52,20 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <select className="selectUsers" onChange={this.selectHandler}>
-                <option className="option" value=''>Selecciona una usuaria</option>
-                {this.state.adalabUsers.map(user => {
-                    return (
-                        <option key={user.id} className="option" value={user.login}>{user.login}</option>
-                    );
-                })}
-            </select>
+          <select className="selectUsers" onChange={this.selectHandler}>
+            <option className="option" value=''>Selecciona una usuaria</option>
+              {this.state.adalabUsers.map(user => {
+                return (
+                  <option key={user.id} className="option" value={user.login}>{user.login}</option>
+                );
+              })}
+          </select>
         </header>
         <Card
           adalabUsers={this.state.adalabUsers}
           userName={this.state.userName}
         />
+        <Footer />
       </div>
     );
   }

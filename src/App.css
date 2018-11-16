@@ -1,37 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
-  background: linear-gradient(lightgrey, grey);
+  background: url("./images/github-logo.png"), linear-gradient(lightgrey, grey);
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
 }
 .App-header {
-  
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 .selectUsers {
-  margin: 50px;
+  margin: 50px 0 10px 0;
   width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: grey;
 }
 .option {
-  height: 500px;
+  margin: 20px;
+ 
+  /* height: 500px; */
 }
-.card {
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card{
   height: 536px;
   width: 320px;
   background: white;
   border-radius: 10px;
 }
 .card-image {
-  max-width: 320px;
+  width: 320px;
 }
-.card-personal{
-  height: 115px
+.card-personal {
+  height: 115px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px 0 0 30px;
+}
+.card-username {
+ color: lightgrey;
+}
+.card-name{
+  color: #3d8171;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.fa-map-marker-alt{
+  color: #4eb8a3;
+  margin-right: 5px;
 }
 .card-github {
   height: 100px;
   background: linear-gradient(#3d8171, #4eb8a3);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 40px;
 }
-
+.date-created{
+  color: grey;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
