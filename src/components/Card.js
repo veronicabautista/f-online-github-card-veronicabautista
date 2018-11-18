@@ -8,8 +8,30 @@ class Card extends Component {
       let profile;
       const filterUser = adalabUsers.filter(profile => profile.login === userName)
       profile = filterUser[0];
-
       (console.log(profile))
+
+      const created_at = profile.created_at;
+      (console.log(created_at))
+      const created = created_at.slice(0, 9);
+      const createdYearString = created.slice(0, 4);
+      const createdMonthString = created.slice(5, 7)
+      const date = new Date();
+      const actualYear = date.getFullYear();
+      const actualMonth = date.getMonth();
+      const createdYear = parseInt(createdYearString);
+      const createdMonth = parseInt(createdMonthString);
+
+      let actualDate;
+      if (actualYear === createdYear) {
+        actualDate = (actualMonth - createdMonth) + ' meses';
+      } else if (actualYear === createdYear && actualMonth - createdMonth === 1) {
+        actualDate = '1 mes';
+      } else if (actualYear - createdYear === 1) {
+        actualDate = '1 año';
+      } else {
+        actualDate = (actualYear - createdYear) + ' años';
+      }
+
 
       return (
         <div className="card-container">
@@ -18,7 +40,6 @@ class Card extends Component {
             <img src={profile.avatar_url}
               className="card-image"
               alt={`Foto de la usuaria ${profile.login}`} />
-
           </div>
           <div className="card-personal">
             <span className="card-username">@{profile.login}</span>
@@ -43,7 +64,7 @@ class Card extends Component {
           </div>
         </div>
         <div className="date-created">
-          <span>{profile.created_at}</span>
+          <span>Miembro desde hace {actualDate}</span>
         </div>
       </div>
       );

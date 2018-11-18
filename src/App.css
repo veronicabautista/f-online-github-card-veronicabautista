@@ -2,7 +2,7 @@
 body, html { 
   margin: 0; 
   padding: 0; 
-  height: 100%;
+  height: 100vh;
 }
 .App {
   text-align: center;
@@ -55,7 +55,7 @@ body, html {
   border-top-right-radius: 5px;
 }
 .card-personal {
-  height: 115px;
+  height: 110px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -67,8 +67,8 @@ body, html {
 .card-name{
   color: #099d8d;
   font-weight: bold;
-  margin-bottom: 20px;
-  margin-top: 0;
+  margin-bottom: 15px;
+  margin-top: 5px;
 }
 
 .fa-map-marker-alt{
@@ -99,11 +99,14 @@ body, html {
   font-weight: bold;
 }
 .card-github-text{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: lighter;
 }
 .date-created{
   color: grey;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 14px;
 }
 .footer {
   display: flex;
