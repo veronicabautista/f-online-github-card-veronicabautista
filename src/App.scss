@@ -1,0 +1,12 @@
+@import "src/styles/general";
+@import "src/styles/select";
+@import "src/styles/card";
+@import "src/styles/footer";
+
+
+body, html { 
+  margin: 0; 
+  padding: 0; 
+  height: 100vh;
+  overflow: hidden;
+}

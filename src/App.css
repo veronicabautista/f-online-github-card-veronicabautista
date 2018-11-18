@@ -1,26 +1,18 @@
-
-body, html { 
-  margin: 0; 
-  padding: 0; 
-  height: 100vh;
-}
 .App {
   text-align: center;
   background: url("./images/github-logo.png"), linear-gradient(#e4e0e0, #b8b8b9);
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  position: relative;
   font-family: 'Ubuntu', sans-serif;
   padding: 30px;
   position: relative;
-  height: 100vh;
-}
+  height: 100vh; }
+
 .App-header {
   display: flex;
-  justify-content: center;
-  position: relative;
-}
+  justify-content: center; }
+
 .selectUsers {
   margin-bottom: 20px;
   width: 300px;
@@ -29,55 +21,55 @@ body, html {
   font-weight: bold;
   color: grey;
   -webkit-box-shadow: 0 0 1em;
-  padding: 10px;
-}
-.select{
-  cursor: 10px;
-}
+  padding: 10px; }
+
+.select {
+  cursor: 10px; }
+
 .option {
-  padding: 20px;
-}
-.card-container{
+  padding: 20px; }
+
+.card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.card{
+  margin: 0; }
+
+.card {
   width: 320px;
-  background: white;  
+  background: white;
   -webkit-box-shadow: 0 0 1em;
-  border-radius: 5px;
-}
+  border-radius: 5px; }
+
 .card-image {
   width: 320px;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
+  border-top-right-radius: 5px; }
+
 .card-personal {
   height: 110px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin: 20px 0 0 30px;
-}
+  margin: 20px 0 0 30px; }
+
 .card-username {
- color: darkgrey;
-}
-.card-name{
+  color: darkgrey; }
+
+.card-name {
   color: #099d8d;
   font-weight: bold;
   margin-bottom: 15px;
-  margin-top: 5px;
-}
+  margin-top: 5px; }
 
-.fa-map-marker-alt{
+.fa-map-marker-alt {
   color: #14d8c3;
-  margin-right: 5px;
-}
-.card-location{
-  color: grey;
-}
+  margin-right: 5px; }
+
+.card-location {
+  color: grey; }
+
 .card-github {
   height: 100px;
   background: linear-gradient(#099d8d, #14d8c3);
@@ -87,35 +79,39 @@ body, html {
   justify-content: space-around;
   align-items: center;
   border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.github-data{
+  border-bottom-right-radius: 5px; }
+
+.github-data {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-.card-github-number{
+  justify-content: center; }
+
+.card-github-number {
   font-size: 40px;
-  font-weight: bold;
-}
-.card-github-text{
+  font-weight: bold; }
+
+.card-github-text {
   font-size: 14px;
-  font-weight: lighter;
-}
-.date-created{
+  font-weight: lighter; }
+
+.date-created {
   color: grey;
   margin-top: 5px;
   font-weight: bold;
-  font-size: 14px;
-}
+  font-size: 14px; }
+
 .footer {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  position: absolute;
   bottom: 0;
-}
-.logo-adalab{
-  width: 100px;
-}
+  margin: 0; }
 
+.logo-adalab {
+  width: 100px; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; }

@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  background: url("./images/github-logo.png"), linear-gradient(#e4e0e0, #b8b8b9);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 30px;
+  position: relative;
+  height: 100vh;
+}
+.App-header {
+  display: flex;
+  justify-content: center;
+}
