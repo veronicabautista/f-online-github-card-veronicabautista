@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logoAdalab from '../images/logo-adalab.png';
 
-class Card extends Component {
+class Footer extends Component {
   render() {
     return (
       <div className="footer">
@@ -11,4 +11,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default Footer;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Select from './components/Select';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import './App.css';
@@ -51,16 +52,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <select className="selectUsers" onChange={this.selectHandler}>
-            <option className="option" value=''>Selecciona una usuaria</option>
-              {this.state.adalabUsers.map(user => {
-                return (
-                  <option key={user.id} className="option" value={user.login}>{user.login}</option>
-                );
-              })}
-          </select>
-        </header>
+        <Select
+          adalabUsers={this.state.adalabUsers} 
+          selectHandler={this.selectHandler}/>
         <Card
           adalabUsers={this.state.adalabUsers}
           userName={this.state.userName}
