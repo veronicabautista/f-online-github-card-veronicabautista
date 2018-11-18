@@ -32,7 +32,6 @@ class Card extends Component {
         actualDate = (actualYear - createdYear) + ' años';
       }
 
-
       return (
         <div className="card-container">
         <div className="card">

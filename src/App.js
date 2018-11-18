@@ -23,7 +23,6 @@ class App extends Component {
     this.fetchGithubUsers();
   }
 
-
   fetchGithubUsers (){
     fetch(apiList)
     .then((response) => response.json())
@@ -48,7 +47,6 @@ class App extends Component {
     this.setState({ userName: e.target.value })
   }
 
-  
   render() {
     return (
       <div className="App">
