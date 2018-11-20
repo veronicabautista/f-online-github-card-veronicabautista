@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: url("./images/github-logo.png"), linear-gradient(#e4e0e0, #b8b8b9);
+  background: url("./images/github-logo.png"), linear-gradient(#e4e0e0, #a5a5a5);
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -102,10 +102,10 @@
 
 .footer {
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
   bottom: 0;
-  margin: 0; }
+  margin: 10px;
+  position: fixed; }
 
 .logo-adalab {
   width: 100px; }

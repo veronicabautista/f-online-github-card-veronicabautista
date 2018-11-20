@@ -1,9 +1,9 @@
 .footer {
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
   bottom: 0;
-  margin: 0;
+  margin: 10px;
+  position: fixed;
 }
 .logo-adalab{
   width: 100px;
